@@ -89,6 +89,16 @@ create table curriculum.section_detail_material(
 );
 
 
+--check value--
+alter table curriculum.program_entity add constraint prog_type check (prog_type in ('bootcamp','course'));
+alter table curriculum.program_entity add constraint prog_learning_type check (prog_learning_type in ('online','offline','both'));
+alter table curriculum.program_entity add constraint prog_best_seller check (prog_best_seller in ('0','1'));
+alter table curriculum.program_entity add constraint prog_language check (prog_language in ('english','bahasa'));
+alter table curriculum.program_entity add constraint prog_durataion_type check (prog_duration_type in ('month','week','days'));
+alter table curriculum.program_entity add constraint prog_status check (prog_status in ('draft','publish'));
+alter table curriculum.section_detail add constraint secd_preview check (secd_preview in ('0','1'));
+alter table curriculum.section_detail_material add constraint sedm_filetype check (sedm_filetype in ('video','image','text','link'));
+
 --references from different modules--
 alter table curriculum.program_reviews set constraint program_reviews_fk2 foreign key (prow_user_entity_id) references users.users(user_entity_id);
 alter table curriculum.program_entity set constraint program_entity_fk1 foreign key (prog_city_id) references master.city(city_id);
