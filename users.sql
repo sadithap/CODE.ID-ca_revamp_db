@@ -179,4 +179,4 @@ CREATE TABLE users.users_address(
 alter table users.users_skill add constraint FK_uski_skty_name foreign key (uski_skty_name) references master.skill_type(skty_name);
 alter table users.users_experiences add constraint FK_usex_city_id foreign key (usex_city_id) references master.city(city_id);
 alter table users.users_address add constraint FK_etad_addr_id foreign key (etad_addr_id) references master.address(addr_id);
-alter table user_users_address add constraint FK_etad_adty_id foreign key (etad_adty_id) references master.address_type(adty_id);
+alter table users.users_address add constraint FK_etad_adty_id foreign key (etad_adty_id) references master.address_type(adty_id);

@@ -100,8 +100,8 @@ alter table curriculum.section_detail add constraint secd_preview check (secd_pr
 alter table curriculum.section_detail_material add constraint sedm_filetype check (sedm_filetype in ('video','image','text','link'));
 
 --references from different modules--
-alter table curriculum.program_reviews set constraint program_reviews_fk2 foreign key (prow_user_entity_id) references users.users(user_entity_id);
-alter table curriculum.program_entity set constraint program_entity_fk1 foreign key (prog_city_id) references master.city(city_id);
-alter table curriculum.program_entity set constraint program_entity_fk2 foreign key (prog_cate_id) references master.category(cate_id);
-alter table curriculum.program_entity set constraint program_entity_fk3 foreign key (prog_created_by) references users.business_entity(entity_id);
-alter table curriculum.program_entity set constraint program_entity_fk4 foreign key (prog_status) references master.status(status);
+alter table curriculum.program_reviews add constraint program_reviews_fk2 foreign key (prow_user_entity_id) references users.users(user_entity_id);
+alter table curriculum.program_entity add constraint program_entity_fk1 foreign key (prog_city_id) references master.city(city_id);
+alter table curriculum.program_entity add constraint program_entity_fk2 foreign key (prog_cate_id) references master.category(cate_id);
+alter table curriculum.program_entity add constraint program_entity_fk3 foreign key (prog_created_by) references users.business_entity(entity_id);
+alter table curriculum.program_entity add constraint program_entity_fk4 foreign key (prog_status) references master.status(status);
