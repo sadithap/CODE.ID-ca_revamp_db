@@ -1,3 +1,6 @@
+CREATE SCHEMA IF NOT EXISTS users
+    AUTHORIZATION postgres;
+
 CREATE TABLE users.business_entity (
     entity_id serial primary key --pk
    

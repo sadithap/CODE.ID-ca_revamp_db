@@ -1,5 +1,6 @@
 -- MAIN QUERY || MODULE PAYMENT --
-
+CREATE SCHEMA IF NOT EXISTS payment
+    AUTHORIZATION postgres;
 
 create table payment.bank (
 	bank_entity_id int primary key,

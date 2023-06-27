@@ -1,4 +1,7 @@
 
+CREATE SCHEMA IF NOT EXISTS master
+    AUTHORIZATION postgres;
+
 create table master.status(
 	status varchar(15) primary key,
 	status_modified_date timestamp

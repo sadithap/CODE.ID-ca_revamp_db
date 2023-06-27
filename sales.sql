@@ -1,8 +1,8 @@
 --
 -- create schema 
 --
-create schema sales;
-
+CREATE SCHEMA IF NOT EXISTS sales
+    AUTHORIZATION postgres;
 --
 -- create table sales.Special_Offter
 --

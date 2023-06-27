@@ -1,5 +1,6 @@
-create schema bootcamp;
-
+CREATE SCHEMA IF NOT EXISTS bootcamp
+    AUTHORIZATION postgres;
+	
 create table bootcamp.program_apply(
 	prap_user_entity_id int,
 	prap_prog_entity_id int,

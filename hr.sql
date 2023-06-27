@@ -1,7 +1,7 @@
 -- Module Human Resource
 
-create schema HR
-
+CREATE SCHEMA IF NOT EXISTS HR
+    AUTHORIZATION postgres;
 create table HR.employee (
 	emp_entity_id integer, -- PK & FK References users.user_entity_id <==
 	emp_emp_number varchar(25) unique,

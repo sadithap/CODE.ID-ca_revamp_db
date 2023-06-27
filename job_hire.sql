@@ -1,3 +1,6 @@
+CREATE SCHEMA IF NOT EXISTS job_hire
+    AUTHORIZATION postgres;
+
 create table job_hire.employee_range(
 	emra_id serial primary key,
 	emra_range_min int unique,
