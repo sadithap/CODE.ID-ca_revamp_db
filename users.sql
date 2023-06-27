@@ -41,13 +41,9 @@ CREATE TABLE users.users_roles (
 	constraint FK_usro_role_id foreign key (usro_role_id) references users.roles (role_id)
 );
 
--- ERROR:  there is no unique constraint matching given keys for referenced table "users_roles" --
--- jadi table users_roles harus di bikin unique dulu
-ALTER TABLE users.users_roles
-ADD CONSTRAINT unique_usro_role_id UNIQUE (usro_role_id);
--- baru setelah itu bisa alter refrence dari table users ke tabel users_role
+
 ALTER TABLE users.users
-ADD CONSTRAINT fk_user_current_role FOREIGN KEY (user_current_role) REFERENCES users.users_roles(usro_role_id);
+ADD CONSTRAINT fk_user_current_role FOREIGN KEY (user_current_role) REFERENCES users.roles(role_id);
 
 
 
