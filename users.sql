@@ -170,9 +170,9 @@ CREATE TABLE users.users_address(
 	etad_modified_date timestamp,
 	etad_entity_id int, --fk
 	etad_adty_id int, --fk reference ke table address_type pada module master
-	constraint FK_etad_entity_id foreign key (etad_entity_id) references users.users (user_entity_id)
+	constraint FK_etad_entity_id foreign key (etad_entity_id) references users.users (user_entity_id),
+	constraint PK_etad_addr_id primary key (etad_addr_id)
 );
-
 
 --references from other modules--
 alter table users.users_skill add constraint FK_uski_skty_name foreign key (uski_skty_name) references master.skill_type(skty_name);

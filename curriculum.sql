@@ -33,7 +33,6 @@ create table curriculum.program_entity(
 	prog_best_seller char(1),
 	prog_price numeric,
 	prog_language varchar(35),
-	prog_modified_data timestamp,
 	prog_duration int,
 	prog_duration_type varchar(15),
 	prog_tag_skill varchar(512),
